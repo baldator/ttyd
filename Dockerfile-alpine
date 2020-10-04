@@ -9,7 +9,7 @@ RUN apk add --no-cache openssh-client
 
 RUN apk add curl git
 RUN curl -LO https://dl.k8s.io/v1.19.0-rc.4/kubernetes-client-linux-386.tar.gz
-RUN && tar -xzf kubernetes-client-linux-386.tar.gz  && chmod u+x ./kubernetes/client/bin/kubectl && mv ./kubernetes/client/bin/kubectl /bin/kubectl && rm kubernetes-client-linux-386.tar.gz
+RUN tar -xzf kubernetes-client-linux-386.tar.gz  && chmod u+x ./kubernetes/client/bin/kubectl && mv ./kubernetes/client/bin/kubectl /bin/kubectl && rm kubernetes-client-linux-386.tar.gz
 
 EXPOSE 7681
 
